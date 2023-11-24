@@ -11,6 +11,6 @@ public class DBConnection {
         String password = System.getenv("pass"); // Use your own environment variable name
         String database = System.getenv("db"); // Use your own ssariable name
 
-        return DriverManager.getConnection(jdbcUrl, username, password, db);
+        return DriverManager.getConnection(jdbcUrl, username, password, database);
     }
 }
