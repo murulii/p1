@@ -1,4 +1,3 @@
-
 package mavenWebproject;
 
 import java.io.IOException;
@@ -12,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@SuppressWarnings("serial") // Add this annotation to suppress the warning
 @WebServlet("/AddDataServlet")
 public class AddDataServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -19,7 +19,7 @@ public class AddDataServlet extends HttpServlet {
         int age = Integer.parseInt(request.getParameter("age"));
 
         try (Connection connection = DBConnection.getConnection()) {
-            String query = "INSERT INTO data (name, age) VALUES (?, ?)";
+            String query = "INSERT INTO your_table_name (name, age) VALUES (?, ?)";
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setString(1, name);
                 preparedStatement.setInt(2, age);
