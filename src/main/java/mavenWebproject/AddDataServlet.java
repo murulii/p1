@@ -18,7 +18,7 @@ public class AddDataServlet extends HttpServlet {
         int age = Integer.parseInt(request.getParameter("age"));
 
         try (Connection connection = DBConnection.getConnection()) {
-            String query = "INSERT INTO your_table_name (name, age) VALUES (?, ?)";
+            String query = "INSERT INTO data (name, age) VALUES (?, ?)";
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setString(1, name);
                 preparedStatement.setInt(2, age);
