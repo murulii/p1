@@ -9,7 +9,7 @@ public class DBConnection {
         String jdbcUrl = System.getenv("host"); // Use your own environment variable name
         String username = System.getenv("user"); // Use your own environment variable name
         String password = System.getenv("pass"); // Use your own environment variable name
-         String database = System.getenv("db"); // Use your own environment variable name
+        String database = System.getenv("db"); // Use your own ssariable name
 
         return DriverManager.getConnection(jdbcUrl, username, password, db);
     }
