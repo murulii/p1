@@ -14,6 +14,6 @@ public class DBConnection {
         // The JDBC URL should include the database name
         String fullJdbcUrl = jdbcUrl + "/" + database;
 
-        return DriverManager.getConnection(fullJdbcUrl, username, password)
+        return DriverManager.getConnection(fullJdbcUrl, username, password);
     }
 }
