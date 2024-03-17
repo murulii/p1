@@ -32,13 +32,16 @@ pipeline {
                  sh "mvn test"
            }
        }
+      stage('SonarQube Analsyis') {
+            steps {
+                withSonarQubeEnv('sonar') {
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=BoardGame -Dsonar.projectKey=BoardGame \
+                            -Dsonar.java.binaries=. '''
+                }
+            }
+        }
         
         
-        stage("docker"){
-           steps {
-                 sh "docker build -t new:latest ."
-           }
-       }
         
         
         
