@@ -36,7 +36,7 @@ pipeline {
         
         stage("docker"){
            steps {
-                 sh "docker build -t new:v1 ."
+                 sh "docker build -t new:latest ."
            }
        }
         
