@@ -38,7 +38,7 @@ environment {
        }
       stage('SonarQube Analsyis') {
             steps {
-                withSonarQubeEnv('sonar') {
+                withSonarQubeEnv('sonar-server') {
                     sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=myproject -Dsonar.projectKey=myproject \
                             -Dsonar.java.binaries=. '''
                 }
