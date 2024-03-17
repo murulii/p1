@@ -65,7 +65,12 @@ environment {
                 }
             }
         }
-        
+
+        stage('Build') {
+            steps {
+               sh "mvn package"
+            }
+        }
         
         
     }
