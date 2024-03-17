@@ -4,9 +4,9 @@ pipeline {
         maven 'maven'
         jdk 'jdk'
     }
-       enviornment {
-        SCANNER_HOME= tool 'sonar-scanner'
-    }
+     enviornment {
+         SCANNER_HOME= tool 'sonar-scanner'
+       }
 
 
     stages {
