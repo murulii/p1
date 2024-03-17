@@ -93,9 +93,8 @@
 <distributionManagement>
     <repository>
 
-      <id>maven-release-1</id>
-      <name>maven-release-1</name>
-      <url>http://54.237.72.59:8081/repository/maven-release-1</url>
+      <id>maven-releases</id>
+      <url>http://54.237.72.59:8081/repository/maven-releases/</url>
     </repository>
    
 </distributionManagement>
