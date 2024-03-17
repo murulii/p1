@@ -48,6 +48,10 @@
   
   </dependencies>
 
+	
+
+
+	
   <build>
     <finalName>mavenWebproject</finalName>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
@@ -84,4 +88,19 @@
       </plugins>
     </pluginManagement>
   </build>
+
+	<distributionManagement>
+    <repository>
+//rep path
+      <id>muruli_hosted</id>
+      <name>muruli_hosted</name>
+      <url>http://212.2.246.26:8081/repository/muruli_hosted/</url>
+    </repository>
+    <snapshotRepository>
+      <id>muruli_snapshot</id>
+      <name>muruli_snapshot</name>
+      <url>http://212.2.246.26:8081/repository/muruli_snapshot/</url>
+    </snapshotRepository>
+</distributionManagement>
+	
 </project>
