@@ -4,6 +4,10 @@ pipeline {
         maven 'maven'
         jdk 'jdk'
     }
+       enviornment {
+        SCANNER_HOME= tool 'sonar-scanner'
+    }
+
 
     stages {
        
@@ -35,7 +39,7 @@ pipeline {
       stage('SonarQube Analsyis') {
             steps {
                 withSonarQubeEnv('sonar') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=BoardGame -Dsonar.projectKey=BoardGame \
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=myproject -Dsonar.projectKey=myproject \
                             -Dsonar.java.binaries=. '''
                 }
             }
