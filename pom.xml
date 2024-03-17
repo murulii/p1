@@ -94,12 +94,12 @@
 //rep path
       <id>muruli_hosted</id>
       <name>muruli_hosted</name>
-      <url>http://212.2.246.26:8081/repository/muruli_hosted/</url>
+      <url>http://54.237.72.59:8081/repository/maven-release-1/</url>
     </repository>
     <snapshotRepository>
       <id>muruli_snapshot</id>
       <name>muruli_snapshot</name>
-      <url>http://212.2.246.26:8081/repository/muruli_snapshot/</url>
+      <url>http://54.237.72.59:8081/repository/maven-snapshot-1/</url>
     </snapshotRepository>
 </distributionManagement>
 	
