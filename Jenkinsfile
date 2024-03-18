@@ -80,7 +80,16 @@ environment {
             }    
             }
         }
-        
+
+
+
+        stage('Docker Build') {
+            steps {
+               sh "docker build -t murulii/tomcat:v11 ."
+               sh "docker run -it -p 8089:8080 -d murulii/tomcat:v1"
+               sh "docker ps"
+            }
+        }
         
     }
 }
