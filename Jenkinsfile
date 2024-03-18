@@ -75,7 +75,7 @@ environment {
         //stage('Push') {
           //  steps {
           //     withMaven(globalMavenSettingsConfig: 'maven-config-global', jdk: 'jdk', maven: 'maven', mavenSettingsConfig: '', traceability: true) {
-          /      // some block
+              // some block
          //       sh 'mvn deploy'
          //   }    
        //     }
